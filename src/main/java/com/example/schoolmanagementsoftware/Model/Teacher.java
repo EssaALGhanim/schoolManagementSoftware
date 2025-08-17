@@ -33,7 +33,7 @@ public class Teacher {
     @Column(columnDefinition = "double not null")
     private Double salary;
 
-    @OneToOne(mappedBy = "teacher")
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "teacher")
     @PrimaryKeyJoinColumn
     private Address address;
 }
